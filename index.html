@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <div class="container">
+        
+        <div class = "destination-bar">
+            <div class="labels">
+                <p class="label1">Destination</p>
+                <p class="label2">Type</p>
+                <p class="label3">Dates</p>
+            </div>
+            
+            <div class="yellow-bar">
+                
+                <span class="dot place_dot1"></span>
+                <hr class="line1">
+                
+                <span class="dot place_dot2"></span>
+                <hr class="line2">
+                
+                <span class="dot place_dot3"></span>
+                <hr class="line3">
+            </div>
+            
+        </div>
+
+
+        <div class="select-dates">
+            <p>Select Dates</p>
+        </div>
+        <div class="calendar">
+            <div class="months">
+                <div class="prev-month" onclick="prevMonth()"></div>
+                <div class="active-month"></div>
+                <div class="next-month" onclick="nextMonth()"></div>
+            </div>
+            <div class="weekdays">
+                <div class="sun">Sun</div>
+                <div class="mon">Mon</div>
+                <div class="tue">Tue</div>
+                <div class="wed">Wed</div>
+                <div class="thu">Thu</div>
+                <div class="fri">Fri</div>
+                <div class="sat">Sat</div>
+                
+            </div>
+            <div class="days">
+                
+    
+            </div>
+        </div>
+        <div class="arrival-departure">
+            <div class="arrival">
+                <p class="arrival-label">
+                    Arrival
+                </p>
+                <p class="arrival-date">
+                    
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="depart">
+                <p class="depart-label">
+                    Departure
+                </p>
+                <p class="depart-date">
+                    
+                </p>
+            </div>
+        </div>
+        <div class="done-btn">
+            <button> Done</button>
+        </div>
+
+
+
+        
+    </div>
+
+
+    <nav class="footer">
+        <div class="bottom-menu">
+            <div class="slider"></div>
+            <div class="bar">
+                <div class="back-arrow " >
+                    <a href="#" >
+                        <img src="icons8-back-90 1.png" alt="img">
+                    </a>
+                </div>
+                <div class="home">
+                    <a href="#" class="active">
+                         <img src="icons8-home-64 1.png" alt="img">
+                    </a>
+                </div>
+                <div class="activity-list">
+                    <a href="#">
+                       <img src="icons8-wish-list-64 2.png" alt="img">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+    </nav>
+	
+ 
+	<link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>
+<!--
+    <div class="prev-day">26</div>
+            <div class="prev-day">27</div>
+            <div class="prev-day">28</div>
+            <div class="prev-day">29</div>
+            <div class="prev-day">30</div>
+            <div class="prev-day">31</div>
+            <div class="day1" onclick="changeDate(1)"><span class="back-color"></span ><span class="num">1</span></div>
+            <div class="day2" onclick="changeDate(2)"><span class="back-color"></span ><span class="num">2</span></div>
+            <div class="day3" onclick="changeDate(3)"><span class="back-color"></span ><span class="num">3</span></div>
+            <div class="day4" onclick="changeDate(4)"><span class="back-color"></span ><span class="num">4</span></div>
+            <div class="day5" onclick="changeDate(5)"><span class="back-color"></span ><span class="num">5</span></div>
+            <div class="day6" onclick="changeDate(6)"><span class="back-color"></span ><span class="num">6</span></div>
+            <div class="day7" onclick="changeDate(7)"><span class="back-color"></span ><span class="num">7</span></div>
+            <div class="day8" onclick="changeDate(8)"><span class="back-color"></span ><span class="num">8</span></div>
+            <div class="day9" onclick="changeDate(9)"><span class="back-color"></span ><span class="num">9</span></div>
+            <div class="day10" onclick="changeDate(10)"><span class="back-color"></span ><span class="num">10</span></div>
+            <div class="day11" onclick="changeDate(11)"><span class="back-color"></span ><span class="num">11</span></div>
+            <div class="day12" onclick="changeDate(12)"><span class="back-color"></span ><span class="num">12</span></div>
+            <div class="day13" onclick="changeDate(13)"><span class="back-color"></span ><span class="num">13</span></div>
+            <div class="day14" onclick="changeDate(14)"><span class="back-color"></span ><span class="num">14</span></div>
+            <div class="day15" onclick="changeDate(15)"><span class="back-color"></span ><span class="num">15</span></div>
+            <div class="day16" onclick="changeDate(16)"><span class="back-color"></span ><span class="num">16</span></div>
+            <div class="day17" onclick="changeDate(17)"><span class="back-color"></span ><span class="num">17</span></div>
+            <div class="day18" onclick="changeDate(18)"><span class="back-color"></span ><span class="num">18</span></div>
+            <div class="day19" onclick="changeDate(19)"><span class="back-color"></span ><span class="num">19</span></div>
+            <div class="day20" onclick="changeDate(20)"><span class="back-color"></span ><span class="num">20</span></div>
+            <div class="day21" onclick="changeDate(21)"><span class="back-color"></span ><span class="num">21</span></div>
+            <div class="day22 active-first-day" onclick="changeDate(22)"><span class="back-color"></span ><span class="num">22</span></div>
+            <div class="day23" onclick="changeDate(23)"><span class="back-color"></span ><span class="num">23</span></div>
+            <div class="day24" onclick="changeDate(24)"><span class="back-color"></span ><span class="num">24</span></div>
+            <div class="day25" onclick="changeDate(25)"><span class="back-color"></span ><span class="num">25</span></div>
+            <div class="day26 active-last-day"onclick="changeDate(26)"><span class="back-color"></span ><span class="num">26</span></div>
+            <div class="day27"onclick="changeDate(27)"><span class="back-color"></span ><span class="num">27</span></div>
+            <div class="day28" onclick="changeDate(28)"><span class="back-color"></span ><span class="num">28</span></div>
+            <div class="day29" onclick="changeDate(29)"><span class="back-color"></span ><span class="num">29</span></div>
+            <div class="day30" onclick="changeDate(30)"><span class="back-color"></span ><span class="num">30</span></div>
+            <div class="next-day">1</div>
+            <div class="next-day">2</div>
+            <div class="next-day">3</div>
+            <div class="next-day">4</div>
+            <div class="next-day">5</div>
+            <div class="next-day">6</div>
+-->

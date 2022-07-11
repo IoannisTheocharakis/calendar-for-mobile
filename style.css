@@ -1,0 +1,361 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	height: 100vh;
+	background-color:white;
+	
+}
+
+.container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.months{
+    display: flex;
+    color :Black;
+    justify-content: space-between;
+    padding: 3vh 0;
+    width: 100%;
+    border-top:    1px solid  #00000075;
+    border-bottom: 1px solid #00000075;
+
+}
+.months div{
+    font-size: 3vw;
+    width: calc(100%/3);
+    color:#476A6F;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.months .active-month{
+    color: Black;
+    font-size: 3.7vw;;
+}
+.weekdays{
+    
+    width: 100%;
+    height: 2vh;
+    justify-content: space-between;
+    padding: 6vh 4vw 5vh 4vw;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div{
+    font-weight: bold;
+    font-size: 3vw;
+    letter-spacing: 0.1rem;
+    width: calc(90%/7);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.days{
+    padding: 0vh 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid #00000075;
+}
+.days div{
+    position: relative;
+    font-size :4vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(100%/7);
+    height:9.5vh;
+
+}
+.prev-day,.next-day{
+    color:rgba(0, 0, 0, 0.425);
+}
+.active-first-day,.active-last-day{
+    background-color: #FA8A67;
+    display: flex;
+    color:white;
+    border-radius: 50%;
+}
+
+.active-first-day  .back-color {
+    position: absolute;
+    background-color: #fa896771;
+    width: 50%;
+    right:0;
+    height: 100%;
+    display: flex;
+    
+}
+.active-last-day .back-color{
+    position: absolute;
+    background-color: #fa896771;
+    width: 50%;
+    left: 0;
+    height: 100%;
+    display: flex;
+}
+.active-last-day .num,.active-first-day .num{
+    position: relative;
+    
+}
+.betweendays span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fa896771;
+    z-index: -1;
+}
+.betweendays .num{
+    position: relative;
+    z-index: 1;
+}
+
+/**-------------BARRRR-------------*/
+
+.footer{
+    position: sticky ;
+    bottom: 0;
+    width: 100%;
+    height: 9vw;
+    margin-top:30px;
+    background-color: #2B2D42;
+    border-radius: 6px 6px 18px 18px;   
+    z-index: 9;
+}
+
+.bottom-menu{
+	position: relative;
+    margin:0 auto;
+    width: 85%;
+    height: 100%;
+    
+   
+}
+.bar {
+    height: 100%;
+	display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+   
+}
+
+
+.bar div a{
+	width: 5.8vw;
+	height:5.8vw;
+	display: block;
+	transition: 1s;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.bar div a.active img{ 
+    top:-5.1vw;
+    transition-delay: .3s;
+    transition : 0.8s;
+    z-index:9;
+}
+
+.bar div a img{
+	width: 100%;
+	position: absolute;
+	top:0%;
+	left: 0;
+	transition-delay: .3s;
+	transition: 1s;
+	z-index: 9;
+	
+}
+
+
+.slider{
+	width : 7.5vw ;
+    height: 7.5vw;
+    background-color: #2B2D42;
+    border-radius: 50%;
+    position: absolute;
+    left :50%;
+    transform: translateX(-50%);
+    top:-4vw;
+    transition: 0.6s;
+    box-shadow: 0px 0px 0px 5px white;
+}
+
+.activity-list{
+	display: flex;
+	text-align: right;
+	justify-content: flex-end;
+}
+
+.home{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+
+@media screen and (min-width: 500px) {
+  .bar div a.active img{ 
+    
+    
+    left:-2.5%;
+}
+}
+
+@media screen and (min-width: 650px) {
+  .bar div a.active img{ 
+    
+    left:2%;
+}
+}
+@media screen and (min-width: 900px) {
+  .bar div a.active img{ 
+    
+    left:4%;
+}
+}
+
+/*------destination -- bar --- */
+.destination-bar{
+    width: 80%;
+    margin: 3vh auto;
+    height: 8vh;
+    position: relative;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 4vh;
+    align-items: center;
+    align-content: center;
+    font-weight:500;
+    font-size: 4vw;
+    color: #ffc15e;
+}
+.labels p{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.yellow-bar{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 4vh;
+    align-items: center;
+    align-content: center;
+    color: #ffc15e;
+}
+
+
+.yellow-bar .line1,.yellow-bar .line2,.yellow-bar .line3{
+    height: 1vh;
+    background-color: #ffc15e;
+    width: calc(100%/3);
+    border:none;
+}
+.yellow-bar .line1,.yellow-bar .line2{
+    border-radius:0;
+}
+.yellow-bar .line3{
+    border-radius: 0px 18px 18px 0px;  
+}
+.yellow-bar .dot{
+    height: 3.5vw;
+    width: 3.5vw;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #ffc15e;
+}
+
+/*------fake nav-----*/
+.navbar{
+    height: 8vh;
+    width: 100%;
+    background-color: #2B2D42;
+}
+
+/*---select-dates---*/
+.select-dates{
+    font-size: 7vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+}
+
+.arrival-departure{
+    width: 100%;
+    height: 10vh;
+    box-shadow: black;
+    margin: 5vw 0;
+    display: flex;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+
+}
+.arrival,.depart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.arrival-departure .line{
+    height: 70%;
+    width: 0.3%;
+    background-color: rgba(0, 0, 0, 0.26);
+    display: flex;
+    align-self: center;
+    border-radius: 2px;
+}
+.depart-label,.arrival-label{
+    font-size: 5vw;
+    color :#476A6F;
+    width: 100%;
+}
+
+.depart-date,.arrival-date{
+    font-size: 4vw;
+    width: 100%;
+}
+/*---done btn*/
+.done-btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.done-btn button{
+    width: 40vw;
+    height:15vw;
+    background: #FA8A67;
+    border-radius: 15px;
+    color:white;
+    border:none;
+    font-size: 5vw;
+    font-weight: bold;
+}
